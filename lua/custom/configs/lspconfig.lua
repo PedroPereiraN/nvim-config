@@ -61,3 +61,9 @@ lspconfig.dartls.setup {
   capabilities = capabilities,
   filetypes = { "dart" },
 }
+
+lspconfig.pyright.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "python" }
+}

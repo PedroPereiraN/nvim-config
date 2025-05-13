@@ -11,7 +11,7 @@ return {
       require "configs.lspconfig"
       require "custom.configs.lspconfig"
     end,
-  },
+    },
   {
     "williamboman/mason.nvim",
     opts = {
@@ -21,7 +21,8 @@ return {
         "gopls",
         "eslint-lsp",
         "prettier",
-        "dartls"
+        "dartls",
+        "pyright"
       }
     }
   },
@@ -50,8 +51,7 @@ return {
       require("dap-go").setup(opts)
       --require("core.utils").load_mapping("dap_go")
     end
-  }
-
+  },
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
