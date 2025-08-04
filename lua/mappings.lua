@@ -19,11 +19,11 @@ map("i", "<Tab>", function()
   end
 end, { expr = true, silent = true, desc = "Accept Copilot suggestion" })
 
-map("i", "<C-]>", function()
+map("i", "<M-]>", function()
   require("copilot.suggestion").next()
 end, { silent = true, desc = "Next Copilot suggestion" })
 
-map("i", "<C-[>", function()
+map("i", "<M-[>", function()
   require("copilot.suggestion").prev()
 end, { silent = true, desc = "Previous Copilot suggestion" })
 
@@ -99,8 +99,8 @@ map("n", "<leader>ct", ":Copilot toggle<CR>", { desc = "Toggle Copilot" })
 --
 -- COPILOT:
 -- Tab           -> Aceitar sugestão do Copilot
--- Ctrl+]        -> Próxima sugestão do Copilot
--- Ctrl+[        -> Sugestão anterior do Copilot
+-- Alt+]         -> Próxima sugestão do Copilot
+-- Alt+[         -> Sugestão anterior do Copilot
 -- Ctrl+\        -> Dispensar sugestão do Copilot
 -- <leader>ct    -> Toggle Copilot on/off
 -- <leader>cc    -> Copilot Chat
