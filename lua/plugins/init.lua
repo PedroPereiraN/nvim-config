@@ -4,7 +4,6 @@ return {
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
   },
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -52,6 +51,12 @@ return {
       --require("core.utils").load_mapping("dap_go")
     end
   },
+  {
+    "github/copilot.vim",
+    event = "VeryLazy"
+  },
+
+  -- These are some examples, uncomment them if you want to see them work!
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
