@@ -51,10 +51,44 @@ return {
       --require("core.utils").load_mapping("dap_go")
     end
   },
+  --{
+  --  "github/copilot.vim",
+  --  event = "VeryLazy"
+  --},
+
+
+
+  -- Copilot core
   {
-    "github/copilot.vim",
-    event = "VeryLazy"
+    "zbirenbaum/copilot.lua",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("copilot").setup({
+        suggestion = { enabled = true },
+        panel = { enabled = true },
+      })
+    end,
   },
+
+  -- CopilotChat
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "main",
+    lazy = false,
+    dependencies = {
+      "zbirenbaum/copilot.lua",
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("CopilotChat").setup({
+        debug = true,
+      })
+    end,
+  },
+
+
+
 
   -- These are some examples, uncomment them if you want to see them work!
   -- {
